@@ -143,9 +143,7 @@ public class DepartmentDaoJDBC implements DepartmentDao {
             List<Department> list = new ArrayList<>();
 
             while(rs.next()){
-                Department dep = new Department();
-
-                dep = instantiateDepartment(rs);
+                Department dep = instantiateDepartment(rs);
 
                 list.add(dep);
             }
