@@ -13,12 +13,13 @@ public class Program2 {
 
         DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 
-        /*System.out.println("=== TESTE 1 : department insert ===");
+        System.out.println("=== TESTE 1 : department insert ========= FLAG");
+        if(0 > 10) {
+            Department newDepartment = new Department(null, "Music");
+            departmentDao.insert(newDepartment);
 
-        Department newDepartment = new Department(null, "Music");
-        departmentDao.insert(newDepartment);
-
-        System.out.println("New department inserted!");*/
+            System.out.println("New department inserted!");
+        }
 
         System.out.println("\n=== TESTE 2 : department findById ===");
         Department department = departmentDao.findById(6);
@@ -30,18 +31,19 @@ public class Program2 {
         departmentDao.update(department);
         System.out.println("UPDATED!");
 
-        System.out.println("\n=== TESTE 4 : department delete ===");
-        System.out.println("Enter id for delete department: ");
-        int id = sc.nextInt();
-        departmentDao.deleteById(id);
-        System.out.println("DELETED!");
+        System.out.println("\n=== TESTE 4 : department delete ========= FLAG");
+        if(0 > 10) {
+            System.out.println("Enter id for delete department: ");
+            int id = sc.nextInt();
+            departmentDao.deleteById(id);
+            System.out.println("DELETED!");
+        }
 
         System.out.println("\n=== TESTE 5 : department findAll ===");
         List<Department> list = departmentDao.findAll();
         for (Department obj : list){
             System.out.println(obj);
         }
-
 
         sc.close();
     }

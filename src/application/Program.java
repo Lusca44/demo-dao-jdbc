@@ -35,11 +35,13 @@ public class Program {
             System.out.println(obj);
         }
 
-        /*System.out.println("\n=== TESTE 4 : seller insert ===");
-        Seller newSeller = new Seller(null, "Greg", "Greg@gmail.com", new Date(), 4000.00, dep);
-        sellerDao.insert(newSeller);
+        System.out.println("\n=== TESTE 4 : seller insert ========= FLAG");
+        if(0 > 10) {
+            Seller newSeller = new Seller(null, "Greg", "Greg@gmail.com", new Date(), 4000.00, dep);
+            sellerDao.insert(newSeller);
 
-        System.out.println("Inserted! new seller id = " + newSeller.getId());*/
+            System.out.println("Inserted! new seller id = " + newSeller.getId());
+        }
 
         System.out.println("\n=== TESTE 5 : seller update ===");
         seller = sellerDao.findById(1);
@@ -47,12 +49,14 @@ public class Program {
         sellerDao.update(seller);
         System.out.println("UPDATED!");
 
-        System.out.println("\n=== TESTE 6 : seller delete ===");
-        System.out.println("Enter id for delete teste: ");
-        int id = sc.nextInt();
-        sellerDao.deleteById(id);
+        System.out.println("\n=== TESTE 6 : seller delete ========= FLAG");
+        if(0 > 10) {
+            System.out.println("Enter id for delete teste: ");
+            int id = sc.nextInt();
+            sellerDao.deleteById(id);
 
-        System.out.println("Seller id  = " + id + " deleted!");
+            System.out.println("Seller id  = " + id + " deleted!");
+        }
 
         sc.close();
     }
