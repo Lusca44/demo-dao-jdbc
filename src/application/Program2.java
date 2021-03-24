@@ -23,6 +23,11 @@ public class Program2 {
         Department department = departmentDao.findById(6);
         System.out.println(department);
 
+        System.out.println("\n=== TESTE 3 : department update ===");
+        department = departmentDao.findById(6);
+        department.setName("Clothes");
+        departmentDao.update(department);
+        System.out.println("UPDATED!");
 
         sc.close();
     }
